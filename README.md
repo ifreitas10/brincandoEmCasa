@@ -1,5 +1,4 @@
 # brincandoEmCasa
-
 import javax.swing.*;
 
 public class estudoProva {
@@ -53,5 +52,42 @@ public class estudoProva {
 
     public static void main(String[] args){
         meuProgramaInteiro();
+    }
+}
+-----------------------------------------------------------------------------------------------------------
+//Calculo para mostrar as combinações possíveis de 2 dados com 6 valores em cada.
+    public static void calcularDados(int dadoUm, int dadoDois){
+        for (dadoUm =1; dadoUm <= 6; dadoUm++){
+            for(dadoDois= 1; dadoDois<=6; dadoDois++){
+                System.out.print("Dado1 Dado2\n  "+dadoUm+"     "+dadoDois+"\n");
+                //System.out.println("Dado2\n"+dadoDois);
+            }
+        }
+    }
+
+    //criação de menu para o usuário;
+    public static String menuNovoPrograma(){
+        String respostaUsuario = JOptionPane.showInputDialog("Deseja continuar?");
+        int dadoA = 1;
+        int dadoB = 1;
+            if (respostaUsuario.equals("sim")){
+                calcularDados(dadoA,dadoB);
+            }else {
+                JOptionPane.showMessageDialog(null, "SAIU");
+            }
+            return respostaUsuario;
+    }
+
+    //Metódo para calcular dado1 e dado2 e mostrar o menu para o usuário;
+    public static void meuProgramaNovoInteiro(){
+        int dadoSegundo = 1;
+        int dadoPrimeiro = 1;
+        calcularDados(dadoPrimeiro,dadoSegundo);
+        menuNovoPrograma();
+    }
+
+    //Minha classe principal
+    public static void main(String[] args){
+        meuProgramaNovoInteiro();
     }
 }
