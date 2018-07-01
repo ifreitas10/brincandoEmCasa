@@ -92,4 +92,42 @@ public class estudoProva {
     public static void main(String[] args){
         meuProgramaNovoInteiro();
     }
+    
+    // ------------------------------------------------------------------------------------------------
+    //BRINCANDO 01/07/2018
+    
+    public class Principal {
+
+
+    public static void main(String[] args){
+        int[] numeros;
+        String[] frutas;
+
+        numeros = new int[4];
+        frutas = new String[4];
+
+        int indice = 0;
+
+        /*for (int i = 0; i<=3; i++){
+            numeros[i] = indice + 1;
+            indice = indice + 1;
+            JOptionPane.showMessageDialog(null,numeros[i]);
+
+        }*/
+        for (int i = 0; i <=3; i++){
+            frutas[0] = "pera";
+            frutas[1] = "laranja";
+            frutas[2] = "pera";
+            frutas[3] = "arroz";
+
+            if (((frutas[i] != "pera") && (frutas[i] != "laranja") && (frutas[i] != "morango"))){
+                frutas[i] = "meu, tem alguma coisa errada";
+            }
+
+            JOptionPane.showMessageDialog(null, frutas[i]);
+        }
+
+    }
+}    
+    
 }
